@@ -1,10 +1,6 @@
 def monHeron( A ) :
-  (L , l) = ( A , 1)
+  ( L , l ) = ( A , 1 )
   for i in range(10) :
-    L = (L + l) / 2
+    L = ( L + l ) / 2
     l = A / L
-    # print( L )
-  # print( "carré" , L * L)
-  print( A , L )
-
-  return L
+  return (L + l) / 2
