@@ -1,3 +1,9 @@
+# !git clone https://github.com/YRL-M/MesBiblis
+# import sys
+# sys.path.append("/content/MesBiblis")
+# from basique import division
+
+
 def racine( A ) :
   """Calcul de la racine carrée de A par Héron en 10 étapes"""
   ( L , l ) = ( A , 1 )
