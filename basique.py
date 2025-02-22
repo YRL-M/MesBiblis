@@ -22,3 +22,23 @@ def division( a , b ) :
     q = q + 1
   
   return ( q , r )
+
+
+def divLongue( D , d , p ) :
+  """A partir d'un couple Dividende diviseur : (D,d)
+  On print les étapes d'une division 
+  effectuée à la main  sur p étapes
+  """
+
+  print( str(D).ljust(10) + str(d).rjust(5) )
+
+  for i in range( p ) :
+    
+    ( q , r ) = division( D , d )
+    D = 10*r
+
+    if ( r , q ) == ( 0 , 0 ) :
+      break
+      
+    print(str(r).ljust(10) + str(q).rjust(5) )
+
