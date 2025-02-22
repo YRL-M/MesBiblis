@@ -30,7 +30,7 @@ def divLongue( D , d , p ) :
   effectuée à la main  sur p étapes
   """
 
-  print( str(D).ljust(10) + str(d).rjust(5) +"\n----------------------" )
+  print( str(D).ljust(10) + str(d).rjust(5) +"\n---------------" )
 
   for i in range( p ) :
     
