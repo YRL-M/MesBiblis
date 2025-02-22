@@ -20,31 +20,35 @@ def racine( A ) :
 
 
 
-def division( a , b ) :
-  """Renvoit q et r , quotient et reste de la division de a par b."""
-  q , r = 0 , a
-  while r >= b :
-    r = r - b
-    q = q + 1
-  
-  return ( q , r )
+def division(D:int, d:int):
+    """Renvoit q et r , quotient et reste de la division de D par d."""
+
+    if d == 0:
+        raise ValueError("Le diviseur ne peut pas être zéro.")
+
+    q, r = 0, D
+    while r >= d:
+        r -= d
+        q += 1
+
+    return q, r
 
 
-def divLongue( D , d , p ) :
-  """A partir d'un couple Dividende diviseur : (D,d)
-  On print les étapes d'une division 
-  effectuée à la main  sur p étapes
-  """
+def division_longue(D:int, d:int, p:int):
+    """A partir d'un couple Dividende diviseur : (D, d)
+    On print les étapes d'une division 
+    effectuée à la main sur p étapes
+    """
 
-  print( str(D).ljust(10) + str(d).rjust(5) +"\n---------------" )
+    r = D                # travail sur r local plutôt que l'argument D
+    print( str(D).ljust(10) + str(d).rjust(5) +"\n---------------" )
 
-  for i in range( p ) :
-    
-    ( q , r ) = division( D , d )
-    D = 10*r
+    for _ in range( p ) :
+        (q, r) = division(r, d)
 
-    if ( r , q ) == ( 0 , 0 ) :
-      break
-      
-    print(str(r).ljust(10) + str(q).rjust(5) )
+        if (r, q) == (0, 0) :
+            break
+            
+        print(str(r).ljust(10) + str(q).rjust(5) )
+        r *= 10
 
