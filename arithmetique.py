@@ -35,21 +35,59 @@ def racine( A ) :
 
 
 
-def division(D, d):
+# def division(D, d):
 
+#     q, r = 0, D
+#     while r >= d:
+#         m = d
+#         p = 1
+
+#         while r >= m:
+#             m *= 10
+#             p *= 10
+
+#         r -= m //10  #d
+#         q += p //10  #1
+#     return q, r
+  
+
+
+
+
+def division(D:int, d:int):
+    """
+    Renvoie le quotient et le reste de la division entière de D par d.
+    division(D, d) >> q, r
+    """
+
+    if d==0:
+        raise ZeroDivisionError(f"Dividende = {D}, diviseur = {d}")
+    if type(D)!=int :
+        raise TypeError(f"{D} n'est pas un entier.")
+    if type(d)!=int:
+        raise TypeError(f"{d} n'est pas un entier.")
+    if d < 0:
+        raise ValueError(f"Le diviseur {d} doit être positif.")
+    if D < 0:
+        raise ValueError(f"Le Dividende {D} doit être positif.")
+
+    # Initialisation
     q, r = 0, D
+
+    # Calcul
     while r >= d:
         m = d
         p = 1
-
+        # Recherche du multiple de d le plus proche de r
         while r >= m:
             m *= 10
             p *= 10
 
-        r -= m //10  #d
-        q += p //10  #1
-    return q, r
-  
+        # Il y va p fois
+        r -= m // 10  # d
+        q += p // 10  # 1
+
+    return q, r # Quotient et reste de D/d
 
 
 
