@@ -20,18 +20,38 @@ def racine( A ) :
 
 
 
-def division(D:int, d:int):
-    """Renvoit q et r , quotient et reste de la division de D par d."""
+# def division(D:int, d:int):
+#     """Renvoit q et r , quotient et reste de la division de D par d."""
 
-    if d == 0:
-        raise ValueError("Le diviseur ne peut pas être zéro.")
+#     if d == 0:
+#         raise ValueError("Le diviseur ne peut pas être zéro.")
+
+#     q, r = 0, D
+#     while r >= d:
+#         r -= d
+#         q += 1
+
+#     return q, r
+
+
+
+def division(D, d):
 
     q, r = 0, D
     while r >= d:
-        r -= d
-        q += 1
+        m = d
+        p = 1
 
+        while r >= m:
+            m *= 10
+            p *= 10
+
+        r -= m //10  #d
+        q += p //10  #1
     return q, r
+  
+
+
 
 
 def division_longue(D:int, d:int, p:int):
