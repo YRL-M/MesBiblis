@@ -10,7 +10,7 @@
 
 #   ------------------   #
 
-def Heron(n, verbose=False) :
+def Heron(n:int, verbose=False) :
     """
     Vérifie si True ou False un entier n est un carré parfait.
     Renvoie b, r : booléen et la racine de n.
