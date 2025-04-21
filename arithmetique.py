@@ -10,18 +10,32 @@
 
 #   ------------------   #
 
-def racine( A ) :
-  """Calcul de la racine carrée de A par Héron en 10 étapes"""
-  ( L , l ) = ( A , 1 )
-  for i in range(10) :
-    L = ( L + l ) / 2
-    l = A / L
-  return (L + l) / 2
+def est_carré(n, verbose=False) :
+    """
+        Vérifie si True ou False un entier n est un carré parfait.
+        Renvoie b, r : booléen et la racine de n.
+    """
 
-
-
-
-  
+    if n == 0 : 
+        return True
+    if not isinstance(n, int):
+        raise TypeError(f"{n} doit être un int")
+    if n < 0 :
+        raise ValueError(f"{n} doit être positif")
+    
+    ( L , l ) = ( n , 1 )
+    
+    for _ in range( 10000 ) :  
+        L = quotient( L + l, 2)
+        l = quotient(n, L) 
+        if verbose : 
+            print( L, l)
+        if L*L == n:
+            return True,L
+        if L <= l :
+            return False,L
+    return False,L
+ 
 
 
 
