@@ -10,52 +10,51 @@
 
 #   ------------------   #
 
-# def Heron(n, verbose=False) :
-#     """
-#         Vérifie si True ou False un entier n est un carré parfait.
-#         Renvoie b, r : booléen et la racine de n.
-#     """
+def Heron(n, verbose=False) :
+    """
+    Vérifie si True ou False un entier n est un carré parfait.
+    Renvoie b, r : booléen et la racine de n.
+    """
 
-#     if n == 0 : 
-#         return True
-#     if not isinstance(n, int):
-#         raise TypeError(f"{n} doit être un int")
-#     if n < 0 :
-#         raise ValueError(f"{n} doit être positif")
+    if n == 0 : 
+        return True
+    if not isinstance(n, int):
+        raise TypeError(f"{n} doit être un int")
+    if n < 0 :
+        raise ValueError(f"{n} doit être positif")
     
-#     ( L , l ) = ( n , 1 )
+    ( L , l ) = ( n , 1 )
     
-#     for _ in range( 10000 ) :  
-#         L = quotient( L + l, 2)
-#         l = quotient(n, L) 
-#         if verbose : 
-#             print( L, l)
-#         if L*L == n:
-#             return True, L
-#         if L <= l :
-#             return False, L
-#     return False, L
+    for _ in range( 10000 ) :  
+        L = quotient( L + l, 2)
+        l = quotient(n, L) 
+        if verbose : 
+            print( L, l)
+        if L*L == n:
+            return True, L
+        if L <= l :
+            return False, L
+    return False, L
  
 
-# def est_carré(n):
-#     """
-#     Renvoie le booléen si True ou False n est un carré parfait.
-#     Basé sur b,r = Heron(n)
-#     est_carré(n) >> b True ou False
-#     """
-#     b, r = Heron(n)
-#     return b
+def est_carré(n):
+    """
+    Renvoie le booléen si True ou False n est un carré parfait.
+    Basé sur b,r = Heron(n)
+    est_carré(n) >> b True ou False
+    """
+    b, r = Heron(n)
+    return b
   
-# def iracine(n):
-#     """
-#     Renvoie la racine entière exacte sur n est un carré parfait.
-#     Ou approximative si n n'en est pas un.
-#     Basé sur b,r = Heron(n)
-#     iracine(n) >> r (int)
-#     """
-#     b, r = Heron(n)
-#     return r
-
+def iracine(n):
+    """
+    Renvoie la racine entière exacte sur n est un carré parfait.
+    Ou approximative si n n'en est pas un.
+    Basé sur b,r = Heron(n)
+    iracine(n) >> r (int)
+    """
+    b, r = Heron(n)
+    return r
 
 
 def division(D:int, d:int):
