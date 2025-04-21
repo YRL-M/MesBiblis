@@ -1,7 +1,7 @@
 # !git clone https://github.com/YRL-M/MesBiblis
 # import sys
-# sys.path.append("/content/MesBiblis")
-# from basique import division
+# sys.path.append('/content/MesBiblis')
+# from arithmetique import *
 
 # Liste des fonctions : 
   # racine
@@ -20,35 +20,7 @@ def racine( A ) :
 
 
 
-# def division(D:int, d:int):
-#     """Renvoit q et r , quotient et reste de la division de D par d."""
 
-#     if d == 0:
-#         raise ValueError("Le diviseur ne peut pas être zéro.")
-
-#     q, r = 0, D
-#     while r >= d:
-#         r -= d
-#         q += 1
-
-#     return q, r
-
-
-
-# def division(D, d):
-
-#     q, r = 0, D
-#     while r >= d:
-#         m = d
-#         p = 1
-
-#         while r >= m:
-#             m *= 10
-#             p *= 10
-
-#         r -= m //10  #d
-#         q += p //10  #1
-#     return q, r
   
 
 
@@ -89,6 +61,26 @@ def division(D:int, d:int):
 
     return q, r # Quotient et reste de D/d
 
+
+
+
+def quotient(D:int, d:int):
+    """
+    Renvoie le quotient de la division entière de D par d.
+    quotient(D, d) >> q
+    """
+    q, r = division(D, d)
+    return q
+
+
+
+def reste(D:int, d:int):
+    """
+    Renvoie le reste de la division entière de D par d.
+    reste(D, d) >> r
+    """
+    q, r = division(D, d)
+    return r
 
 
 
