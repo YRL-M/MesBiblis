@@ -38,13 +38,13 @@ def Heron(n, verbose=False) :
  
 
 def est_carré(n):
-  """
+    """
     Renvoie le booléen si True ou False n est un carré parfait.
     Basé sur b,r = Heron(n)
     est_carré(n) >> b True ou False
     """
-  b, r = Heron(n)
-  return b
+    b, r = Heron(n)
+    return b
   
 def iracine(n):
     """
@@ -53,8 +53,8 @@ def iracine(n):
     Basé sur b,r = Heron(n)
     iracine(n) >> r (int)
     """
-  b, r = Heron(n)
-  return r
+    b, r = Heron(n)
+    return r
 
 
 
