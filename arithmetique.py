@@ -39,11 +39,11 @@ def heron(n:int, verbose=False) :
 
  
 
-def est_carré(n):
+def quadraticité(n):
     """
     Renvoie le booléen si True ou False n est un carré parfait.
     Basé sur b,r = heron(n)
-    est_carré(n) >> b True ou False
+    quadraticité(n) >> b True ou False
     """
     b, r = heron(n)
     return b
