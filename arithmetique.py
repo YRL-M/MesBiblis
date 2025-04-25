@@ -23,13 +23,13 @@ def heron(n:int, verbose=False) :
     if n < 0 :
         raise ValueError(f"{n} doit être positif")
 
-    ( L , l ) = ( n , 1 )
+    (L, l) = (n, 1)
 
     for _ in range( 100000 ) :
-        L = quotient( L + l, 2)
+        L = quotient(L + l, 2)
         l = quotient(n, L)
         if verbose :
-            print( L, l)
+            print(L, l)
         if L*L == n:
             return True, L
         if L <= l :
