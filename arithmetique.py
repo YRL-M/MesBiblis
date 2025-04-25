@@ -127,9 +127,11 @@ def division_longue(D, d, p):
     On print les étapes d'une division 
     effectuée à la main sur p étapes
     """
-    lD, ld = len(str(D)), len(str(d))
-    r = D                # travail sur r local plutôt que l'argument D
-    print( str(D).ljust(10+lD) + "|" + str(d).rjust(10+ld) +"\n"+"-"*(10+lD+10+ld) )
+    s = 3                               # espacement
+    lD, ld = len(str(D)), len(str(d))   # longueur des nombres
+    r = D                               # travail sur r local plutôt que D
+    print( str(D).ljust(s+lD) + "|  " + str(d).ljust(s+ld) )
+    print( " "*(s+lD) + "|--" + "-"*(s+ld) )
 
     for _ in range( p ) :
         (q, r) = division(r, d)
@@ -137,6 +139,5 @@ def division_longue(D, d, p):
         if (q, r) == (0, 0) :
             break
             
-        print( str(r).ljust(10+lD) + "|" + str(q).rjust(10+ld) )
+        print( str(r).ljust(s+lD) + "|  " + str(q).ljust(s+ld) )
         r *= 10
-
