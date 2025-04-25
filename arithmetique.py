@@ -10,7 +10,7 @@
 
 #   ------------------   #
 
-def heron(n:int, verbose:bool=False): -> tuple[bool, int]
+def heron(n: int, verbose: bool =False) -> tuple[bool, int]:
     """
     Effectue l'algorithme de Héron, avec des divisions ENTIERES
     Renvoie b, r : booléen de quadraticité de n et la racine entière de n.
