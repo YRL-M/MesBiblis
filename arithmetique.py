@@ -114,18 +114,18 @@ def reste(D, d):
 
 
 def division_longue(D, d, p):
-    """A partir d'un couple Dividende diviseur : (D, d)
+    """A partir d'un couple (Dividende, diviseur) : (D, d)
     On print les étapes d'une division 
     effectuée à la main sur p étapes
     """
-
+    lD, ld = len(str(D)), len(str(d))
     r = D                # travail sur r local plutôt que l'argument D
-    print( str(D).ljust(10) + str(d).rjust(5) +"\n---------------" )
+    print( str(D).ljust(5+lD+p) + str(d).rjust(5+ld) +"\n"+"-"*(5+lD+p+5+ld) )
 
     for _ in range( p ) :
         (q, r) = division(r, d)
 
-        if (r, q) == (0, 0) :
+        if (q, r) == (0, 0) :
             break
             
         print(str(r).ljust(10) + str(q).rjust(5) )
