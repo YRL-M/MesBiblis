@@ -10,7 +10,7 @@
 
 #   ------------------   #
 
-def heron(n: int, verbose: bool =False) -> tuple[bool, int]:
+def heron(n, verbose=False):
     """
     Effectue l'algorithme de Héron, avec des divisions ENTIERES
     Renvoie b, r : booléen de quadraticité de n et la racine entière de n.
@@ -59,7 +59,7 @@ def iracine(n):
     return r
 
 
-def division(D:int, d:int):
+def division(D, d):
     """
     Renvoie le quotient et le reste de la division entière de D par d.
     division(D, d) >> q, r
@@ -93,7 +93,7 @@ def division(D:int, d:int):
 
 
 
-def quotient(D:int, d:int):
+def quotient(D, d):
     """
     Renvoie le quotient de la division entière de D par d.
     quotient(D, d) >> q
@@ -103,7 +103,7 @@ def quotient(D:int, d:int):
 
 
 
-def reste(D:int, d:int):
+def reste(D, d):
     """
     Renvoie le reste de la division entière de D par d.
     reste(D, d) >> r
@@ -113,7 +113,7 @@ def reste(D:int, d:int):
 
 
 
-def division_longue(D:int, d:int, p:int):
+def division_longue(D, d, p):
     """A partir d'un couple Dividende diviseur : (D, d)
     On print les étapes d'une division 
     effectuée à la main sur p étapes
