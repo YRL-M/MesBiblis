@@ -12,8 +12,8 @@
 
 def heron(n:int, verbose=False) :
     """
-    Vérifie si True ou False un entier n est un carré parfait.
-    Renvoie b, r : booléen et la racine de n.
+    Effectue l'algorithme de Héron, avec des divisions ENTIERES
+    Renvoie b, r : booléen quadraticité de n et la racine entière de n.
     """
 
     if n == 0 : 
@@ -25,7 +25,7 @@ def heron(n:int, verbose=False) :
     
     ( L , l ) = ( n , 1 )
     
-    for _ in range( 10000 ) :  
+    for _ in range( 100000 ) :  
         L = quotient( L + l, 2)
         l = quotient(n, L) 
         if verbose : 
