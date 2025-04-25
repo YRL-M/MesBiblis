@@ -45,7 +45,7 @@ def heron(n, verbose=False):
 
  
 
-def quadratic(n):
+def quadraticité(n):
     """
     Renvoie le booléen True ou False si n est un carré parfait.
     Basé sur b, r = heron(n)
