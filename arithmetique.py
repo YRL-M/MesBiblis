@@ -3,6 +3,13 @@
 # sys.path.append('/content/mesModules')
 # from arithmetique import *
 
+### A FAIRE ###
+# Coef triangle arithmétique
+# Algo euclide
+# Coef bézout
+# Inverse modulaire
+# Puissances modulaires
+
 # Liste des fonctions : 
   # racine
   # division
