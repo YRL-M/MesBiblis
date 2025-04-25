@@ -1,6 +1,6 @@
-# !git clone https://github.com/YRL-M/MesBiblis
+# !git clone https://github.com/YRL-M/mesModules
 # import sys
-# sys.path.append('/content/MesBiblis')
+# sys.path.append('/content/mesModules')
 # from arithmetique import *
 
 # Liste des fonctions : 
