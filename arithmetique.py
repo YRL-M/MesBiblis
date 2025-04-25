@@ -16,25 +16,27 @@ def heron(n:int, verbose=False) :
     Renvoie b, r : booléen quadraticité de n et la racine entière de n.
     """
 
-    if n == 0 : 
-        return True
+    if n == 0 :
+        return True, 0
     if not isinstance(n, int):
         raise TypeError(f"{n} doit être un int")
     if n < 0 :
         raise ValueError(f"{n} doit être positif")
-    
+
     ( L , l ) = ( n , 1 )
-    
-    for _ in range( 100000 ) :  
+
+    for _ in range( 100000 ) :
         L = quotient( L + l, 2)
-        l = quotient(n, L) 
-        if verbose : 
+        l = quotient(n, L)
+        if verbose :
             print( L, l)
         if L*L == n:
             return True, L
         if L <= l :
             return False, L
-    return False, L
+    else: # for,else:
+        raise RuntimeError(f"Attention, heron({n}) a effetué 100000 itérations, c'est anormal.")
+
  
 
 def est_carré(n):
