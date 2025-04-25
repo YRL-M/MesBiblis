@@ -42,7 +42,7 @@ def quadratic(n):
     """
     Renvoie le booléen True ou False si n est un carré parfait.
     Basé sur b, r = heron(n)
-    quadratic(n) >> b
+    quadratic(n) -> b
     """
     b, r = heron(n)
     return b
@@ -53,7 +53,7 @@ def iracine(n):
     Résultat exact si n est un carré parfait.
     Résultat approximatif sinon.
     Basé sur b,r = heron(n)
-    iracine(n) >> r 
+    iracine(n) -> r 
     """
     b, r = heron(n)
     return r
@@ -62,7 +62,7 @@ def iracine(n):
 def division(D, d):
     """
     Renvoie le quotient et le reste de la division entière de D par d.
-    division(D, d) >> q, r
+    division(D, d) -> q, r
     """
 
     if type(D)!=int: raise TypeError(f"{D} n'est pas un entier.")
@@ -96,7 +96,7 @@ def division(D, d):
 def quotient(D, d):
     """
     Renvoie le quotient de la division entière de D par d.
-    quotient(D, d) >> q
+    quotient(D, d) -> q
     """
     q, r = division(D, d)
     return q
@@ -106,7 +106,7 @@ def quotient(D, d):
 def reste(D, d):
     """
     Renvoie le reste de la division entière de D par d.
-    reste(D, d) >> r
+    reste(D, d) -> r
     """
     q, r = division(D, d)
     return r
@@ -114,7 +114,9 @@ def reste(D, d):
 
 
 def division_longue(D, d, p):
-    """A partir d'un couple (Dividende, diviseur) : (D, d)
+    """
+    Fonction d'AFFICHAGE
+    À partir d'un couple (Dividende, diviseur) : (D, d)
     On print les étapes d'une division 
     effectuée à la main sur p étapes
     """
