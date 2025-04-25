@@ -128,6 +128,6 @@ def division_longue(D, d, p):
         if (q, r) == (0, 0) :
             break
             
-        print(str(r).ljust(10) + str(q).rjust(5) )
+        print( str(r).ljust(5+lD+p) + str(q).rjust(5+ld) )
         r *= 10
 
