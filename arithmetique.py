@@ -10,7 +10,7 @@
 
 #   ------------------   #
 
-def Heron(n:int, verbose=False) :
+def heron(n:int, verbose=False) :
     """
     Vérifie si True ou False un entier n est un carré parfait.
     Renvoie b, r : booléen et la racine de n.
@@ -40,20 +40,20 @@ def Heron(n:int, verbose=False) :
 def est_carré(n):
     """
     Renvoie le booléen si True ou False n est un carré parfait.
-    Basé sur b,r = Heron(n)
+    Basé sur b,r = heron(n)
     est_carré(n) >> b True ou False
     """
-    b, r = Heron(n)
+    b, r = heron(n)
     return b
   
 def iracine(n):
     """
     Renvoie la racine entière exacte sur n est un carré parfait.
     Ou approximative si n n'en est pas un.
-    Basé sur b,r = Heron(n)
+    Basé sur b,r = heron(n)
     iracine(n) >> r (int)
     """
-    b, r = Heron(n)
+    b, r = heron(n)
     return r
 
 
