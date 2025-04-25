@@ -129,7 +129,7 @@ def division_longue(D, d, p):
     """
     lD, ld = len(str(D)), len(str(d))
     r = D                # travail sur r local plutôt que l'argument D
-    print( str(D).ljust(5+lD+p) + str(d).rjust(5+ld) +"\n"+"-"*(5+lD+p+5+ld) )
+    print( str(D).ljust(10+lD) + str(d).rjust(10+ld) +"\n"+"-"*(10+lD+10+ld) )
 
     for _ in range( p ) :
         (q, r) = division(r, d)
